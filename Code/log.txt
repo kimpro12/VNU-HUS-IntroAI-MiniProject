@@ -1,0 +1,85 @@
+Using device: cuda
+
+================================================================================
+                         PHASE 1: SOURCE-ONLY BASELINE
+================================================================================
+[Source-Only] Epoch 01: Train Loss=0.6450 | Val Loss=0.1101 | Val Acc=97.57%
+[Source-Only] Epoch 02: Train Loss=0.1396 | Val Loss=0.0566 | Val Acc=98.52%
+[Source-Only] Epoch 03: Train Loss=0.0968 | Val Loss=0.0440 | Val Acc=98.78%
+[Source-Only] Epoch 04: Train Loss=0.0805 | Val Loss=0.0448 | Val Acc=98.68%
+[Source-Only] Epoch 05: Train Loss=0.0716 | Val Loss=0.0374 | Val Acc=98.93%
+[Source-Only] Epoch 06: Train Loss=0.0635 | Val Loss=0.0381 | Val Acc=98.88%
+[Source-Only] Epoch 07: Train Loss=0.0589 | Val Loss=0.0339 | Val Acc=98.97%
+[Source-Only] Epoch 08: Train Loss=0.0539 | Val Loss=0.0314 | Val Acc=99.03%
+[Source-Only] Epoch 09: Train Loss=0.0502 | Val Loss=0.0308 | Val Acc=99.02%
+[Source-Only] Epoch 10: Train Loss=0.0473 | Val Loss=0.0291 | Val Acc=99.07%
+[Source-Only] Epoch 11: Train Loss=0.0444 | Val Loss=0.0299 | Val Acc=99.10%
+[Source-Only] Epoch 12: Train Loss=0.0437 | Val Loss=0.0295 | Val Acc=99.08%
+[Source-Only] Epoch 13: Train Loss=0.0404 | Val Loss=0.0266 | Val Acc=99.23%
+[Source-Only] Epoch 14: Train Loss=0.0388 | Val Loss=0.0274 | Val Acc=99.15%
+[Source-Only] Epoch 15: Train Loss=0.0384 | Val Loss=0.0299 | Val Acc=99.12%
+[Source-Only] Epoch 16: Train Loss=0.0383 | Val Loss=0.0260 | Val Acc=99.27%
+[Source-Only] Epoch 17: Train Loss=0.0368 | Val Loss=0.0277 | Val Acc=99.23%
+[Source-Only] Epoch 18: Train Loss=0.0343 | Val Loss=0.0277 | Val Acc=99.17%
+[Source-Only] Epoch 19: Train Loss=0.0335 | Val Loss=0.0260 | Val Acc=99.28%
+[Source-Only] Epoch 20: Train Loss=0.0330 | Val Loss=0.0291 | Val Acc=99.12%
+[Source-Only] Epoch 21: Train Loss=0.0318 | Val Loss=0.0276 | Val Acc=99.23%
+[Source-Only] Epoch 22: Train Loss=0.0302 | Val Loss=0.0257 | Val Acc=99.25%
+[Source-Only] Epoch 23: Train Loss=0.0284 | Val Loss=0.0261 | Val Acc=99.33%
+[Source-Only] Epoch 24: Train Loss=0.0271 | Val Loss=0.0256 | Val Acc=99.28%
+[Source-Only] Epoch 25: Train Loss=0.0277 | Val Loss=0.0261 | Val Acc=99.25%
+[Source-Only] Epoch 26: Train Loss=0.0272 | Val Loss=0.0255 | Val Acc=99.23%
+[Source-Only] Epoch 27: Train Loss=0.0257 | Val Loss=0.0247 | Val Acc=99.32%
+[Source-Only] Epoch 28: Train Loss=0.0253 | Val Loss=0.0223 | Val Acc=99.33%
+[Source-Only] Epoch 29: Train Loss=0.0254 | Val Loss=0.0235 | Val Acc=99.42%
+[Source-Only] Epoch 30: Train Loss=0.0233 | Val Loss=0.0245 | Val Acc=99.33%
+[Source-Only] Epoch 31: Train Loss=0.0228 | Val Loss=0.0262 | Val Acc=99.35%
+[Source-Only] Epoch 32: Train Loss=0.0236 | Val Loss=0.0276 | Val Acc=99.28%
+[Source-Only] Epoch 33: Train Loss=0.0231 | Val Loss=0.0252 | Val Acc=99.32%
+[Source-Only] Epoch 34: Train Loss=0.0225 | Val Loss=0.0246 | Val Acc=99.32%
+[Source-Only] Epoch 35: Train Loss=0.0220 | Val Loss=0.0238 | Val Acc=99.38%
+Early stopping triggered.
+
+--- Evaluating Source-Only Baseline Model ---
+  Source (MNIST) Test Accuracy:   99.46%
+  Target (MNIST-M) Test Accuracy: 46.71%  <-- DOMAIN GAP
+
+================================================================================
+                           PHASE 2: DANN TRAINING
+================================================================================
+Generating t-SNE plot: Before Adaptation...
+Saved plot to: tsne_paper_before.png
+[DANN] Epoch 01: cls_loss=0.640 | dom_loss=1.255 | src_val_loss=0.1102 | src_acc=97.50% | tgt_acc=49.28% | dom_acc=75.59%
+[DANN] Epoch 02: cls_loss=0.157 | dom_loss=0.962 | src_val_loss=0.0771 | src_acc=97.70% | tgt_acc=57.81% | dom_acc=89.66%
+[DANN] Epoch 03: cls_loss=0.144 | dom_loss=0.945 | src_val_loss=0.0929 | src_acc=97.17% | tgt_acc=58.38% | dom_acc=79.07%
+[DANN] Epoch 04: cls_loss=0.159 | dom_loss=1.060 | src_val_loss=0.0788 | src_acc=97.65% | tgt_acc=57.03% | dom_acc=61.30%
+[DANN] Epoch 05: cls_loss=0.168 | dom_loss=1.232 | src_val_loss=0.0774 | src_acc=97.47% | tgt_acc=61.84% | dom_acc=76.23%
+[DANN] Epoch 06: cls_loss=0.175 | dom_loss=1.230 | src_val_loss=0.0849 | src_acc=97.30% | tgt_acc=64.13% | dom_acc=69.85%
+[DANN] Epoch 07: cls_loss=0.172 | dom_loss=1.247 | src_val_loss=0.0816 | src_acc=97.67% | tgt_acc=69.93% | dom_acc=70.20%
+[DANN] Epoch 08: cls_loss=0.173 | dom_loss=1.294 | src_val_loss=0.1016 | src_acc=96.72% | tgt_acc=72.71% | dom_acc=59.66%
+[DANN] Epoch 09: cls_loss=0.173 | dom_loss=1.291 | src_val_loss=0.0839 | src_acc=97.42% | tgt_acc=69.87% | dom_acc=63.21%
+[DANN] Epoch 10: cls_loss=0.175 | dom_loss=1.305 | src_val_loss=0.0832 | src_acc=97.25% | tgt_acc=72.10% | dom_acc=60.72%
+[DANN] Epoch 11: cls_loss=0.172 | dom_loss=1.281 | src_val_loss=0.0785 | src_acc=97.48% | tgt_acc=73.91% | dom_acc=61.08%
+[DANN] Epoch 12: cls_loss=0.169 | dom_loss=1.323 | src_val_loss=0.0838 | src_acc=97.28% | tgt_acc=81.12% | dom_acc=57.56%
+[DANN] Epoch 13: cls_loss=0.162 | dom_loss=1.323 | src_val_loss=0.0716 | src_acc=97.68% | tgt_acc=82.34% | dom_acc=63.08%
+[DANN] Epoch 14: cls_loss=0.157 | dom_loss=1.294 | src_val_loss=0.0727 | src_acc=97.62% | tgt_acc=79.82% | dom_acc=61.87%
+[DANN] Epoch 15: cls_loss=0.155 | dom_loss=1.330 | src_val_loss=0.0684 | src_acc=97.62% | tgt_acc=79.65% | dom_acc=67.02%
+[DANN] Epoch 16: cls_loss=0.149 | dom_loss=1.299 | src_val_loss=0.0892 | src_acc=97.00% | tgt_acc=80.65% | dom_acc=59.87%
+[DANN] Epoch 17: cls_loss=0.150 | dom_loss=1.305 | src_val_loss=0.0642 | src_acc=98.10% | tgt_acc=81.66% | dom_acc=59.69%
+[DANN] Epoch 18: cls_loss=0.151 | dom_loss=1.319 | src_val_loss=0.0736 | src_acc=97.68% | tgt_acc=82.79% | dom_acc=56.16%
+[DANN] Epoch 19: cls_loss=0.152 | dom_loss=1.299 | src_val_loss=0.0704 | src_acc=97.70% | tgt_acc=84.01% | dom_acc=71.28%
+[DANN] Epoch 20: cls_loss=0.155 | dom_loss=1.292 | src_val_loss=0.0677 | src_acc=97.88% | tgt_acc=81.47% | dom_acc=56.22%
+[DANN] Epoch 21: cls_loss=0.147 | dom_loss=1.295 | src_val_loss=0.0682 | src_acc=97.88% | tgt_acc=84.19% | dom_acc=58.79%
+[DANN] Epoch 22: cls_loss=0.146 | dom_loss=1.297 | src_val_loss=0.0684 | src_acc=97.82% | tgt_acc=79.96% | dom_acc=63.22%
+[DANN] Epoch 23: cls_loss=0.153 | dom_loss=1.294 | src_val_loss=0.0689 | src_acc=97.80% | tgt_acc=85.60% | dom_acc=69.42%
+[DANN] Epoch 24: cls_loss=0.150 | dom_loss=1.304 | src_val_loss=0.0760 | src_acc=97.55% | tgt_acc=83.87% | dom_acc=63.45%
+Early stopping triggered after epoch 24.
+
+--- Final Evaluation After DANN ---
+  Source (MNIST) Test Accuracy:   98.16%
+  Target (MNIST-M) Test Accuracy: 82.06%
+  Final Domain Accuracy:          59.69% (Closer to 50% is better)
+
+  IMPROVEMENT over Source-Only: +35.35%
+Generating t-SNE plot: After Adaptation...
+Saved plot to: tsne_paper_after.png
